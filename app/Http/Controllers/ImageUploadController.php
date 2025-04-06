@@ -30,10 +30,10 @@ class ImageUploadController extends Controller
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $file = $request->file('image');
             $path = $file->store('images', 'public');
-            $url = 'http://localhost:8000/storage/' . $path;
+            $url = asset('storage/' . $path);
 
             // Guardar la URL en la base de datos
-            Image::create(['file_path' => $path, 'url' => $url]);
+            Image::create(['url' => $url]);
 
             return back()
                 ->with('success', '¡Imagen subida correctamente!')
@@ -61,10 +61,10 @@ class ImageUploadController extends Controller
             try {
                 $file = $request->file('image');
                 $path = $file->store('images', 'public');
-                $url = 'http://localhost:8000/storage/' . $path;
+                $url = asset('storage/' . $path);
 
                 // Guardar la URL en la base de datos
-                Image::create(['file_path' => $path, 'url' => $url]);
+                Image::create(['url' => $url]);
 
                 return response()->json([
                     'success' => true,
