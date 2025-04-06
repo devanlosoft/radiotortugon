@@ -13,7 +13,7 @@
 
     <!-- Navbar -->
     <nav class="bg-green-900 bg-opacity-90 py-4 px-6 flex justify-between items-center shadow-md sticky top-0 z-50">
-        <div class="text-2xl font-bold">Radio Viva Verde</div>
+        <div class="text-2xl font-bold">Radio Tortugon</div>
         <ul class="flex space-x-6 text-sm md:text-base">
             <li><a href="#home" class="hover:text-green-200">Inicio</a></li>
             <li><a href="#programas" class="hover:text-green-200">Programación</a></li>
@@ -35,7 +35,9 @@
     <!-- Live Player -->
     <section id="live" class="py-16 px-6 flex flex-col md:flex-row items-center justify-center gap-10">
         <div class="w-full md:w-1/2 shadow-2xl rounded-2xl overflow-hidden">
-            <audio controls><source src="https://estructuraweb.com.co:9558/live" type="audio/mpeg" allow="autoplay"></audio>
+            <audio controls>
+                <source src="https://estructuraweb.com.co:9558/live" type="audio/mpeg" allow="autoplay">
+            </audio>
         </div>
         <div class="w-full md:w-1/2 space-y-6">
             <div class="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-xl shadow-xl text-gray-100">
