@@ -25,7 +25,7 @@
 
     <!-- Header -->
     <header id="home" class="text-center py-20 px-6 bg-green-800 bg-opacity-70">
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-4">🌿 Radio Viva Verde</h1>
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4">🌿 Radio Tortugon</h1>
         <p class="text-lg md:text-xl">Conectando emociones con música — Transmitiendo en vivo 24/7</p>
         <a href="#live"
             class="mt-6 inline-block bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-3 rounded-full transition">🎧
