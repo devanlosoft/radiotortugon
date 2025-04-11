@@ -1,5 +1,6 @@
 <?php // Asegúrate que el archivo comience con esto si está vacío
 
+use App\Http\Controllers\Api\CaratulaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 // 1. Importa tu controlador al principio del archivo
@@ -33,6 +34,9 @@ Route::post('/upload-image', [ImageUploadController::class, 'storeApi']);
 
 // Ruta para obtener todas las imágenes
 Route::get('/images', [ImageUploadController::class, 'index']);
+
+// Ruta para obtener todas las caratulas
+Route::get('/caratulas', [CaratulaController::class, 'index']);
 
 // Puedes añadir otras rutas aquí...
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Image;
+use App\Models\Caratula;
 use Illuminate\Http\JsonResponse; // Para tipar la respuesta
 
-class ItemController extends Controller
+class CaratulaController extends Controller
 {
     /**
      * Muestra una lista de items con solo título y ruta de imagen.
@@ -16,11 +16,11 @@ class ItemController extends Controller
     public function index(): JsonResponse
     {
 
-        $items = Image::select('id', 'title', 'image_path')->get();
-        $formattedItems = $items->map(function ($item) {
+        $items = Caratula::select('id', 'caratula_url')->get();
+        $formattedItems = $items->map(function (Caratula $item) {
             return [
-                'title' => $item->title,
-                'imagePath' => $item->image_path // Mapeamos image_path a imagePath
+                'id' => $item->id,
+                'caratula_url' => $item->caratula_url
 
             ];
         });
